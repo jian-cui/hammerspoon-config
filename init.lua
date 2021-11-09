@@ -330,7 +330,8 @@ if spoon.WinWin then
         spoon.ModalMgr.supervisor:bind(hsresizeM_keys[1], hsresizeM_keys[2], "进入窗口管理模式", function()
             spoon.ModalMgr:deactivateAll()
             -- 显示状态指示器，方便查看所处模式
-            spoon.ModalMgr:activate({"resizeM"}, "#B22222")
+            -- spoon.ModalMgr:activate({"resizeM"}, "#B22222")
+            spoon.ModalMgr:activate({"resizeM"}, "ff0000")
         end)
     end
 end

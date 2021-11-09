@@ -145,8 +145,11 @@ function obj:activate(idList, trayColor, showKeys)
         local cres = cscreen:fullFrame()
         local lcres = cscreen:absoluteToLocal(cres)
         obj.modal_tray:frame(cscreen:localToAbsolute{
-            x = cres.w - 40,
-            y = cres.h - 40,
+            -- 2021.11.09 修改指示灯位置
+            -- x = cres.w - 40,
+            -- y = cres.h - 40,
+            x = cres.w - 50,
+            y = 50,
             w = 20,
             h = 20
         })
