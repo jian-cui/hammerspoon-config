@@ -57,9 +57,6 @@ hs.hotkey.bind({'ctrl', 'cmd'}, ".", function()
   hs.alert.show("App path:        "
   ..hs.window.focusedWindow():application():path()
   .."\n"
-  .."input name:      "
-  ..hs.keycodes.currentMethod()
-  .."\n"
   .."IM source id:  "
   ..hs.keycodes.currentSourceID())
 end)
