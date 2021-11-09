@@ -141,66 +141,66 @@ end
 ----------------------------------------------------------------------------------------------------
 ---------------------------------------- clipshowM 配置 ---------------------------------------------
 ----------------------------------------------------------------------------------------------------
-if spoon.ClipShow then
-    spoon.ModalMgr:new("clipshowM")
-    local cmodal = spoon.ModalMgr.modal_list["clipshowM"]
-    cmodal:bind('', 'escape', '退出 剪切板', function()
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
-    cmodal:bind('', 'Q', '退出 剪切板', function()
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
-    cmodal:bind('', 'N', '保存此会话', function()
-        spoon.ClipShow:saveToSession()
-    end)
-    cmodal:bind('', 'R', '恢复上一个会话', function()
-        spoon.ClipShow:restoreLastSession()
-    end)
-    cmodal:bind('', 'B', '在浏览器中打开', function()
-        spoon.ClipShow:openInBrowserWithRef()
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
-    cmodal:bind('', 'S', '用百度搜索', function()
-        spoon.ClipShow:openInBrowserWithRef("https://www.baidu.com/search?q=")
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
-    cmodal:bind('', 'F', '保存到桌面', function()
-        spoon.ClipShow:saveToFile()
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
-    cmodal:bind('', 'H', '在 Github 中搜索', function()
-        spoon.ClipShow:openInBrowserWithRef("https://github.com/search?q=")
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
-    cmodal:bind('', 'G', '使用 Google 搜索', function()
-        spoon.ClipShow:openInBrowserWithRef("https://www.google.com/search?q=")
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
-    cmodal:bind('', 'L', '用 Sublime Text 打开', function()
-        spoon.ClipShow:openWithCommand("/usr/local/bin/subl")
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
+-- if spoon.ClipShow then
+--     spoon.ModalMgr:new("clipshowM")
+--     local cmodal = spoon.ModalMgr.modal_list["clipshowM"]
+--     cmodal:bind('', 'escape', '退出 剪切板', function()
+--         spoon.ClipShow:toggleShow()
+--         spoon.ModalMgr:deactivate({"clipshowM"})
+--     end)
+--     cmodal:bind('', 'Q', '退出 剪切板', function()
+--         spoon.ClipShow:toggleShow()
+--         spoon.ModalMgr:deactivate({"clipshowM"})
+--     end)
+--     cmodal:bind('', 'N', '保存此会话', function()
+--         spoon.ClipShow:saveToSession()
+--     end)
+--     cmodal:bind('', 'R', '恢复上一个会话', function()
+--         spoon.ClipShow:restoreLastSession()
+--     end)
+--     cmodal:bind('', 'B', '在浏览器中打开', function()
+--         spoon.ClipShow:openInBrowserWithRef()
+--         spoon.ClipShow:toggleShow()
+--         spoon.ModalMgr:deactivate({"clipshowM"})
+--     end)
+--     cmodal:bind('', 'S', '用百度搜索', function()
+--         spoon.ClipShow:openInBrowserWithRef("https://www.baidu.com/search?q=")
+--         spoon.ClipShow:toggleShow()
+--         spoon.ModalMgr:deactivate({"clipshowM"})
+--     end)
+--     cmodal:bind('', 'F', '保存到桌面', function()
+--         spoon.ClipShow:saveToFile()
+--         spoon.ClipShow:toggleShow()
+--         spoon.ModalMgr:deactivate({"clipshowM"})
+--     end)
+--     cmodal:bind('', 'H', '在 Github 中搜索', function()
+--         spoon.ClipShow:openInBrowserWithRef("https://github.com/search?q=")
+--         spoon.ClipShow:toggleShow()
+--         spoon.ModalMgr:deactivate({"clipshowM"})
+--     end)
+--     cmodal:bind('', 'G', '使用 Google 搜索', function()
+--         spoon.ClipShow:openInBrowserWithRef("https://www.google.com/search?q=")
+--         spoon.ClipShow:toggleShow()
+--         spoon.ModalMgr:deactivate({"clipshowM"})
+--     end)
+--     cmodal:bind('', 'L', '用 Sublime Text 打开', function()
+--         spoon.ClipShow:openWithCommand("/usr/local/bin/subl")
+--         spoon.ClipShow:toggleShow()
+--         spoon.ModalMgr:deactivate({"clipshowM"})
+--     end)
 
-    -- 绑定功 clipshowM 快捷键
-    hsclipsM_keys = hsclipsM_keys or {"alt", "C"}
-    if string.len(hsclipsM_keys[2]) > 0 then
-        spoon.ModalMgr.supervisor:bind(hsclipsM_keys[1], hsclipsM_keys[2], "打开剪切板面板", function()
-            spoon.ClipShow:toggleShow()
-            if spoon.ClipShow.canvas:isShowing() then
-                spoon.ModalMgr:deactivateAll()
-                spoon.ModalMgr:activate({"clipshowM"})
-            end
-        end)
-    end
-end
+--     -- 绑定功 clipshowM 快捷键
+--     hsclipsM_keys = hsclipsM_keys or {"alt", "C"}
+--     if string.len(hsclipsM_keys[2]) > 0 then
+--         spoon.ModalMgr.supervisor:bind(hsclipsM_keys[1], hsclipsM_keys[2], "打开剪切板面板", function()
+--             spoon.ClipShow:toggleShow()
+--             if spoon.ClipShow.canvas:isShowing() then
+--                 spoon.ModalMgr:deactivateAll()
+--                 spoon.ModalMgr:activate({"clipshowM"})
+--             end
+--         end)
+--     end
+-- end
 
 
 
@@ -429,4 +429,14 @@ spoon.ModalMgr.supervisor:enter()
 
 ----------------------------------------------------------------------------------------------------
 -------------------------------------------- End ---------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------
+----------------------- cuijian(cj@mored.tech) begin -----------------------------------------------
+----------------------------------------------------------------------------------------------------
+require "cuijian.ime"
+----------------------------------------------------------------------------------------------------
+----------------------- cuijian(cj@mored.tech) begin -----------------------------------------------
 ----------------------------------------------------------------------------------------------------

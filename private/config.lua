@@ -33,22 +33,23 @@ hspoon_list = {
 -- 绑定 启动 app 快捷键
 
 hsapp_list = {
-    {key = 'a', name = 'Alacritty'},
+    -- {key = 'a', name = 'Alacritty'},
     {key = 'c', id = 'com.google.Chrome'},
-    {key = 'e', name = '印象笔记'},
+    -- {key = 'e', name = '印象笔记'},
     {key = 'f', name = 'Finder'},
     {key = 'i', name = 'kitty'},
     {key = 'j', name = 'Typora'},
-    {key = 'o', name = 'Obsidian'},
+    -- {key = 'o', name = 'Obsidian'},
     {key = 'k', name = 'Keynote'},
-    {key = 's', name = 'Sublime Text'},
-    {key = 'p', name = 'Podcasts'},
-    {key = 't', name = 'Terminal'},
+    -- {key = 's', name = 'Sublime Text'},
+    -- {key = 'p', name = 'Podcasts'},
+    -- {key = 't', name = 'Terminal'},
+    {key = 't', name = 'iTerm'},
     {key = 'v', id = 'com.apple.ActivityMonitor'},
     {key = 'b', id = 'vsCode.app'},
-    {key = 'm', name = 'Mweb'},
+    -- {key = 'm', name = 'Mweb'},
     {key = 'w', name = 'WeChat'},
-    {key = 'x', name = 'Thunder'},
+    -- {key = 'x', name = 'Thunder'},
     {key = 'y', id = 'com.apple.systempreferences'},
 }
 
