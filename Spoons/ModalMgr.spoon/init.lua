@@ -148,8 +148,12 @@ function obj:activate(idList, trayColor, showKeys)
             -- 2021.11.09 修改指示灯位置
             -- x = cres.w - 40,
             -- y = cres.h - 40,
-            x = cres.w - 50,
-            y = 50,
+            -- 2021.12.24 指示灯在右上角
+            -- x = cres.w - 50,
+            -- y = 50,
+            -- 指示灯在中间
+            x = cres.w / 2 - 10,
+            y = cres.h / 2 - 10,
             w = 20,
             h = 20
         })
