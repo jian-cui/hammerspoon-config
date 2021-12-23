@@ -129,6 +129,8 @@ hsime_config = {
     {'/Applications/MindNode.app', 'Chinese'},
     {'/Applications/Preview.app', 'Chinese'},
     {'/Applications/wechatwebdevtools.app', 'English'},
+    {'/Applications/语雀.app', 'Chinese'},
+    {'/opt/homebrew/Cellar/emacs-plus@27/27.2/Emacs.app', 'English'}
     -- {'/Applications/Sketch.app', 'English'},
 }
 -- 显示输入法切换
